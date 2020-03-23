@@ -16,3 +16,4 @@ require("./bootstrap");
 
 // contact component
 require("./components/contact/Create");
+require("./components/contact/List");

@@ -8,7 +8,7 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="{{ url('/') }}/assets/images/favicon.ico">
 
         <!-- App css -->
         <link href="{{ url('/') }}/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -66,15 +66,16 @@
 
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
-
         <!-- Vendor js -->
+        <script src="{{ asset('js/app.js') }}"></script>
+
         <script src="{{ url('/') }}/assets/js/vendor.min.js"></script>
 
 
         <!-- App js-->
         <script src="{{ url('/') }}/assets/js/app.min.js"></script>
 
-        <script src="{{ asset('js/app.js') }}"></script>
+       
         
     </body>
 </html>

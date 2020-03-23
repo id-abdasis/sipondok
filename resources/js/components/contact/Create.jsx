@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Axios from "axios";
-import SweetAlert from "sweetalert2-react";
+import Swal from "sweetalert2";
 
 class Create extends Component {
     constructor(props) {
@@ -22,28 +22,32 @@ class Create extends Component {
 
     onSubmitButton(event) {
         event.preventDefault();
-        Axios.post("/contact/store-contact", {
+        const contact = {
             nama: this.state.nama,
             telepon: this.state.telepon
-        });
-        this.setState({
-            show: true,
-            nama: "",
-            telepon: ""
-        });
+        };
+        Axios.post("/contact/store-contact", contact)
+            .then(response => {
+                this.setState({
+                    nama: "",
+                    telepon: ""
+                });
+                Swal.fire("Good job!", "Data berhasil disimpan", "success");
+            })
+            .catch(error => {
+                Swal.fire(
+                    "Kesalahan!",
+                    "Ada kesalahan saat memasukan data!",
+                    "warning"
+                );
+            });
     }
+
+    componentDidMount() {}
 
     render() {
         return (
             <div>
-                <SweetAlert
-                    show={this.state.show}
-                    title="Berhasil"
-                    text="Data Berhasil di Simpan"
-                    type="success"
-                />
-
-                {/* end sweetalert  */}
                 <div className="row">
                     <div className="col-12">
                         <div className="page-title-box">

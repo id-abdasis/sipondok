@@ -21,4 +21,5 @@ Route::get('/', function () {
 Route::group(['prefix' => 'contact'], function () {
     Route::get('create-contact', 'ContactController@create')->name('contact.create');
     Route::post('store-contact', 'ContactController@store')->name('contact.store');
+    Route::get('daftar-contact', 'ContactController@daftar')->name('contact.daftar');
 });
