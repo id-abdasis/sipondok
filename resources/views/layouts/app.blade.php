@@ -70,8 +70,6 @@
         <!-- Vendor js -->
         <script src="{{ url('/') }}/assets/js/vendor.min.js"></script>
 
-        <!-- Dashboar 1 init js-->
-        <script src="{{ url('/') }}/assets/js/pages/dashboard-1.init.js"></script>
 
         <!-- App js-->
         <script src="{{ url('/') }}/assets/js/app.min.js"></script>

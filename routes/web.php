@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts.app');
 });
+
+
+Route::group(['prefix' => 'contact'], function () {
+    Route::get('create-contact', 'ContactController@create')->name('contact.create');
+    Route::post('store-contact', 'ContactController@store')->name('contact.store');
+});

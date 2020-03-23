@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    <div id="create-layout"></div>
+    <div id="create-contact"></div>
 @endsection
