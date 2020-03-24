@@ -96,7 +96,7 @@ class Header extends Component {
                                 >
                                     <div className="notify-icon">
                                         <img
-                                            src="assets/images/users/user-1.jpg"
+                                            src="/assets/images/users/user-1.jpg"
                                             className="img-fluid rounded-circle"
                                         />{" "}
                                     </div>
@@ -132,7 +132,7 @@ class Header extends Component {
                                 >
                                     <div className="notify-icon">
                                         <img
-                                            src="assets/images/users/user-4.jpg"
+                                            src="/assets/images/users/user-4.jpg"
                                             className="img-fluid rounded-circle"
                                         />{" "}
                                     </div>
@@ -218,7 +218,7 @@ class Header extends Component {
                             onClick={this.toggleProfil}
                         >
                             <img
-                                src="assets/images/users/user-1.jpg"
+                                src="/assets/images/users/user-1.jpg"
                                 alt="user-image"
                                 className="rounded-circle"
                             />
@@ -274,14 +274,14 @@ class Header extends Component {
                     <a href="/" className="logo text-center">
                         <span className="logo-lg">
                             <img
-                                src="assets/images/logo-dark.png"
+                                src="/assets/images/logo-dark.png"
                                 height={18}
                             />
                             {/* <span class="logo-lg-text-light">UBold</span> */}
                         </span>
                         <span className="logo-sm">
                             {/* <span class="logo-sm-text-dark">U</span> */}
-                            <img src="assets/images/logo-sm.png" height={24} />
+                            <img src="/assets/images/logo-sm.png" height={24} />
                         </span>
                     </a>
                 </div>

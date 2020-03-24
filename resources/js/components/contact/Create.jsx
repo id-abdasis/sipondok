@@ -8,7 +8,8 @@ class Create extends Component {
         super(props);
         this.state = {
             nama: "",
-            telepon: ""
+            telepon: "",
+            errorForm: []
         };
         this.handleChange = this.handleChange.bind(this);
         this.onSubmitButton = this.onSubmitButton.bind(this);
@@ -30,16 +31,22 @@ class Create extends Component {
             .then(response => {
                 this.setState({
                     nama: "",
-                    telepon: ""
+                    telepon: "",
+                    errorForm: ""
                 });
                 Swal.fire("Good job!", "Data berhasil disimpan", "success");
             })
-            .catch(error => {
+            .catch(errors => {
                 Swal.fire(
                     "Kesalahan!",
                     "Ada kesalahan saat memasukan data!",
                     "warning"
                 );
+
+                this.setState(state => ({
+                    errorForm: errors.response.data
+                }));
+                console.log(this.state.errorForm);
             });
     }
 
@@ -84,6 +91,9 @@ class Create extends Component {
                                             value={this.state.nama}
                                             name="nama"
                                         />
+                                        <small className="text-danger">
+                                            {this.state.errorForm.nama}
+                                        </small>
                                     </div>
 
                                     <div className="form-group">

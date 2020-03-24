@@ -17,7 +17,7 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         $rules = [
-            'nama' => 'required',
+            'nama' => 'required|max:5',
             'telepon'   => 'required'
         ];
 
