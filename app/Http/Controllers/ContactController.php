@@ -44,7 +44,7 @@ class ContactController extends Controller
 
     public function apiDataContact()
     {
-        $contacts = Contact::all();
+        $contacts = Contact::paginate(5);
         return response()->json($contacts, 200);
     }
 }

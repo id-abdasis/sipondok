@@ -10,6 +10,7 @@
         <!-- App favicon -->
         <link rel="shortcut icon" href="{{ url('/') }}/assets/images/favicon.ico">
 
+        @yield('css-plugin')
         <!-- App css -->
         <link href="{{ url('/') }}/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="{{ url('/') }}/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
@@ -71,6 +72,7 @@
 
         <script src="{{ url('/') }}/assets/js/vendor.min.js"></script>
 
+        @yield('js-plugin')
 
         <!-- App js-->
         <script src="{{ url('/') }}/assets/js/app.min.js"></script>

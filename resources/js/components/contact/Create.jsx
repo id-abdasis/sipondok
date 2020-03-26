@@ -46,7 +46,6 @@ class Create extends Component {
                 this.setState(state => ({
                     errorForm: errors.response.data
                 }));
-                console.log(this.state.errorForm);
             });
     }
 
@@ -106,6 +105,9 @@ class Create extends Component {
                                             value={this.state.telepon}
                                             name="telepon"
                                         />
+                                        <small className="text-danger">
+                                            {this.state.errorForm.telepon}
+                                        </small>
                                     </div>
 
                                     <div className="form-group">

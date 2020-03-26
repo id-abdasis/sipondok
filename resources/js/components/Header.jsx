@@ -17,21 +17,27 @@ class Header extends Component {
     toggleProfil(event) {
         event.preventDefault();
         this.setState(state => ({
-            profil: !state.profil
+            profil: !state.profil,
+            notification: false,
+            createMenu: false
         }));
     }
 
     toggleNotification(event) {
         event.preventDefault();
         this.setState(state => ({
-            notification: !state.notification
+            notification: !state.notification,
+            createMenu: false,
+            profil: false
         }));
     }
 
     toggleCreateMenu(event) {
         event.preventDefault();
         this.setState(state => ({
-            createMenu: !state.createMenu
+            createMenu: !state.createMenu,
+            profil: false,
+            notification: false
         }));
     }
 
