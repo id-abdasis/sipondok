@@ -25,7 +25,7 @@
         "sass-loader": "^8.0.0"
     },
     "dependencies": {
-        "datatables.net": "^1.10.20",
+        "datatables.net": "^1.11.3",
         "react-content-loader": "^5.0.2",
         "react-data-table-component": "^6.3.1",
         "react-js-pagination": "^3.0.3",
